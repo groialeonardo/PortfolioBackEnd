@@ -14,7 +14,7 @@ public class Skill {
     
     @Id 
     @GeneratedValue ( strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
   
     private int percent;
     private int radius;
@@ -27,7 +27,7 @@ public class Skill {
     
     
 
-    public Skill(long id, int percent, int radius, String imageSrc, int imageHeight, int imageWidth) {
+    public Skill(Long id, int percent, int radius, String imageSrc, int imageHeight, int imageWidth) {
         this.id = id;
         this.percent = percent;
         this.radius = radius;

@@ -14,25 +14,25 @@ public class ExperienciaService implements IExperienciaService  {
     public IExperienciaRepository expRepo;
 
     @Override
-    public List<Experiencia> getAllExps() {
+    public List<Experiencia> getAll() {
        
         return expRepo.findAll();
        
     }
 
     @Override
-    public Experiencia createExp(Experiencia exp) {
+    public Experiencia create(Experiencia exp) {
         return expRepo.save(exp);
         
     }
 
     @Override
-    public Experiencia updateExp(Experiencia exp) {
+    public Experiencia update(Experiencia exp) {
        return expRepo.save(exp);
     }
 
     @Override
-    public Experiencia deleteExp(Long id) {
+    public Experiencia delete(Long id) {
         Experiencia expToDelete = expRepo.findById(id).orElse(null);
         expRepo.deleteById(id);
         return expToDelete;

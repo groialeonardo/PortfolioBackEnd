@@ -2,17 +2,17 @@
 package com.groialeonardo.lgportfolio.services;
 
 import com.groialeonardo.lgportfolio.model.Experiencia;
-import java.util.List;
+//import java.util.List;
 
-public interface IExperienciaService {
+public interface IExperienciaService extends IGeneralService<Experiencia>{
     
-    public List <Experiencia> getAllExps ();
+   /* public List <Experiencia> getAllExps ();
     
     public Experiencia createExp (Experiencia exp);
     
     public Experiencia updateExp (Experiencia exp);
     
-    public Experiencia deleteExp (Long id);
+    public Experiencia deleteExp (Long id);*/
        
     
 }

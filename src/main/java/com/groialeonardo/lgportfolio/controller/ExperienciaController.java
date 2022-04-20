@@ -3,7 +3,7 @@ package com.groialeonardo.lgportfolio.controller;
 
 import com.groialeonardo.lgportfolio.model.Experiencia;
 import com.groialeonardo.lgportfolio.services.IExperienciaService;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -32,7 +32,7 @@ public class ExperienciaController {
     @ResponseBody
     public List<Experiencia> getExps () {
     
-        return expService.getAllExps();
+        return expService.getAll();
        
     /*    listaExps.add(new Experiencia(1,
                 "../../../../assets/img/Logos/Experiencias/Paladini.jpg",
@@ -50,7 +50,7 @@ public class ExperienciaController {
     @ResponseBody
     public Experiencia postExp (@RequestBody Experiencia exp) {
         
-        return expService.createExp(exp);
+        return expService.create(exp);
    /* exp.setId(id_exp);
     id_exp++;
     listaExps.add(exp);
@@ -64,7 +64,7 @@ public class ExperienciaController {
     @PutMapping ("/exps/{id}")
     @ResponseBody
     public Experiencia putExp (@RequestBody Experiencia exp) {
-        return expService.updateExp(exp);
+        return expService.update(exp);
    /*     
     for(int i=0; i<listaExps.size();i++ ){
       if (listaExps.get(i).getId() == exp.getId()){
@@ -84,7 +84,7 @@ public class ExperienciaController {
     @ResponseBody
     public Experiencia deleteExp (@PathVariable long id) {
         
-        return expService.deleteExp(id);
+        return expService.delete(id);
         
      /*    Long idmock = new Long (999);
         Experiencia exp = new Experiencia(idmock,"void","void","void","void","void","void");
