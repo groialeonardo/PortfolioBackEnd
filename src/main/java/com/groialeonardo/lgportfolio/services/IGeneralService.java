@@ -8,9 +8,9 @@ public interface IGeneralService<T> {
     
     public List <T> getAll();
     
-    public T create (T exp);
+    public T create (T gen);
     
-    public T update(T exp);
+    public T update(T gen);
     
     public T delete (Long id);
     

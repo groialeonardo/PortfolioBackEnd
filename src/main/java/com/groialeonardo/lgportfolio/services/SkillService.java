@@ -22,21 +22,21 @@ public class SkillService implements ISkillService{
     }
 
     @Override
-    public Skill create(Skill exp) {
-        return skillRepo.save(exp);
+    public Skill create(Skill skill) {
+        return skillRepo.save(skill);
         
     }
 
     @Override
-    public Skill update(Skill exp) {
-       return skillRepo.save(exp);
+    public Skill update(Skill skill) {
+       return skillRepo.save(skill);
     }
 
     @Override
     public Skill delete(Long id) {
-        Skill expToDelete = skillRepo.findById(id).orElse(null);
+        Skill skillToDelete = skillRepo.findById(id).orElse(null);
         skillRepo.deleteById(id);
-        return expToDelete;
+        return skillToDelete;
     }
     
 }
