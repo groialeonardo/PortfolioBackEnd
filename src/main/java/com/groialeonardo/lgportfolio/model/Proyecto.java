@@ -1,21 +1,26 @@
 
 package com.groialeonardo.lgportfolio.model;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-//@Entity
+@Entity
 public class Proyecto {
     
   
-//    @Id 
-//   @GeneratedValue ( strategy = GenerationType.AUTO)
+    @Id 
+    @GeneratedValue ( strategy = GenerationType.AUTO)
     private Long id;
     
     
@@ -23,7 +28,13 @@ public class Proyecto {
     private String pathimg;
     private String titulo;
     
-    private List<Tecnologia> tecnologias ;
+    @ManyToMany (cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name="proyecto_tecnologia",
+            joinColumns = @JoinColumn(name = "proyecto_id"),
+            inverseJoinColumns = @JoinColumn(name = "tecnologia_id")
+    )
+    private Set<Tecnologia> tecnologias = new HashSet<>();
     
     private String fecha;  
     private String descripcion;
@@ -32,7 +43,7 @@ public class Proyecto {
     public Proyecto() {
     }
 
-    public Proyecto(Long id, String pathimg, String titulo, List<Tecnologia> tecnologias, String fecha, String descripcion, String projectLink) {
+    public Proyecto(Long id, String pathimg, String titulo, Set<Tecnologia> tecnologias, String fecha, String descripcion, String projectLink) {
         this.id = id;
         this.pathimg = pathimg;
         this.titulo = titulo;
