@@ -16,7 +16,8 @@ public class ExperienciaService implements IExperienciaService  {
     @Override
     public List<Experiencia> getAll() {
        
-        return expRepo.findAll();
+        //return expRepo.findAll();
+       return expRepo.findAllByOrderByInicioDesc();
        
     }
 
