@@ -36,7 +36,7 @@ public class SkillController {
     
     @PostMapping ("/skills")
     @ResponseBody
-    public Skill postSkills (@RequestBody Skill skill) {
+    public Skill postSkill (@RequestBody Skill skill) {
         
         return skillService.create(skill);
 
@@ -44,14 +44,14 @@ public class SkillController {
     
     @PutMapping ("/skills/{id}")
     @ResponseBody
-    public Skill putSkills (@RequestBody Skill skill) {
+    public Skill putSkill (@RequestBody Skill skill) {
         return skillService.update(skill);
 
     }
     
     @DeleteMapping ("/skills/{id}")
     @ResponseBody
-    public Skill deleteSkills (@PathVariable long id) {
+    public Skill deleteSkill (@PathVariable long id) {
         
         return skillService.delete(id);
 
