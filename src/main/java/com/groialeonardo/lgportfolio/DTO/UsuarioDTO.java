@@ -6,7 +6,8 @@ public class UsuarioDTO {
         private Long Id;
         private String username;
         private String password;
-        private String status;    	
+        private String status; 
+//prueba        
 
 
 
