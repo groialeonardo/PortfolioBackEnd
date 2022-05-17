@@ -1,5 +1,7 @@
 package com.groialeonardo.lgportfolio.model;
 
+import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +13,7 @@ import lombok.Setter;
 @Getter @Setter
 @Entity
 
-public class Educacion {
+public class Educacion implements Serializable {
     
     @Id 
     @GeneratedValue ( strategy = GenerationType.AUTO)
@@ -22,6 +24,7 @@ public class Educacion {
     private String titulo;
     private String inicio;
     private String fin;
+    @Column(columnDefinition="TEXT")
     private String descripcion;
 
     public Educacion() {

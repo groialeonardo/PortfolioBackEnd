@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,6 +48,7 @@ public class ProyectoController {
         return proyService.getAll();
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping ("/projects")
     @ResponseBody
     public Proyecto postProyecto (@RequestBody Proyecto proy) {
@@ -55,6 +57,7 @@ public class ProyectoController {
 
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping ("/projects/{id}")
     @ResponseBody
     public Proyecto putProyecto (@RequestBody Proyecto proy) {
@@ -62,8 +65,7 @@ public class ProyectoController {
 
     }
     
-    
-    
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping ("/projects/{id}")
     @ResponseBody
     public Proyecto deleteProyecto (@PathVariable long id) {

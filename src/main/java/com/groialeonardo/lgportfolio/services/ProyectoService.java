@@ -20,7 +20,8 @@ public class ProyectoService implements IProyectoService {
     @Override
     public List<Proyecto> getAll() {
        // return proyRepo.findAll();
-       return proyRepo.findAllByOrderByIdAsc();
+      // return proyRepo.findAllByOrderByIdAsc();
+      return proyRepo.findAllByOrderByFechaDesc();
     }
 
     @Override

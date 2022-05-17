@@ -1,9 +1,11 @@
 
 package com.groialeonardo.lgportfolio.model;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +18,7 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-public class Proyecto {
+public class Proyecto implements Serializable {
     
   
     @Id 
@@ -36,7 +38,8 @@ public class Proyecto {
     )
     private Set<Tecnologia> tecnologias = new HashSet<>();
     
-    private String fecha;  
+    private String fecha;
+    @Column(columnDefinition="TEXT")
     private String descripcion;
     private String projectLink;
 

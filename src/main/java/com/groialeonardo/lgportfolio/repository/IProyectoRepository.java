@@ -9,5 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IProyectoRepository extends JpaRepository <Proyecto,Long> {
     List<Proyecto> findAllByOrderByIdAsc();
+    List<Proyecto> findAllByOrderByFechaDesc();
     
 }

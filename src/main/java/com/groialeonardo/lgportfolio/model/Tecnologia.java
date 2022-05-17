@@ -2,6 +2,7 @@
 package com.groialeonardo.lgportfolio.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Entity;
@@ -14,7 +15,7 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-public class Tecnologia {
+public class Tecnologia implements Serializable {
 
     @Id 
     @GeneratedValue ( strategy = GenerationType.AUTO)
