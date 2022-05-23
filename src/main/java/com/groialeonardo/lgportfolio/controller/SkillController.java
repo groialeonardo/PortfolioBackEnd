@@ -26,11 +26,7 @@ public class SkillController {
     @GetMapping ("/skills")
     @ResponseBody 
     public List<Skill> getSkills () {
-        /*
-        List <Skill> listaSkills = new ArrayList<Skill>();
-        listaSkills.add(new Skill(new Long(1), 90, 80, "../assets/img/Logos/Skills/html5w.png", 75, 50 ));
-                
-        return listaSkills;*/
+        
        return skillService.getAll();
     }
     

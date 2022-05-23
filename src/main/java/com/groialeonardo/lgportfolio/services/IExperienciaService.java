@@ -12,7 +12,6 @@ public interface IExperienciaService extends IGeneralService<Experiencia>{
     
     public Experiencia updateExp (Experiencia exp);
     
-    public Experiencia deleteExp (Long id);*/
-       
+    public Experiencia deleteExp (Long id);*/       
     
 }

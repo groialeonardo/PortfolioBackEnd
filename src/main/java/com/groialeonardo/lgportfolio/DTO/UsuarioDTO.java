@@ -7,9 +7,6 @@ public class UsuarioDTO {
         private String username;
         private String password;
         private String status; 
-//prueba  2      
-
-
 
 	public UsuarioDTO(String status) {
 		this.status = status;              

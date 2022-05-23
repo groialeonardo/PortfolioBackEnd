@@ -56,10 +56,5 @@ public class Persona implements Serializable  {
         this.twitter_link = twitter_link;
     }
 
-
-    
-    
-    
-    
     
 }

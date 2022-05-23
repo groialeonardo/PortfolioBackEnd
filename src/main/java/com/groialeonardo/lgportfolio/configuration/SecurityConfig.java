@@ -1,12 +1,6 @@
-/*
 package com.groialeonardo.lgportfolio.configuration;
 
-public class SecurityConfig extends WebSecurity{
-    
-}*/
-
-package com.groialeonardo.lgportfolio.configuration;
-
+import com.groialeonardo.lgportfolio.repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,6 +24,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+        @Autowired
+        private IUserRepository userRepository;
 
 	@Bean
 	PasswordEncoder passwordEncoder() {

@@ -1,4 +1,3 @@
-
 package com.groialeonardo.lgportfolio.repository;
 
 import com.groialeonardo.lgportfolio.model.Persona;

@@ -39,14 +39,11 @@ public class ProyectoService implements IProyectoService {
     @Override
     public Proyecto delete(Long id) {
         
-        Proyecto proy = proyRepo.findById(id).orElse(null);
-        
-        //Set<Tecnologia> tecnosToDelete = proy.getTecnologias();
-        
-        Proyecto proyToDelete = new Proyecto();
-        proyToDelete.setId(proy.getId());
+        Proyecto proy = proyRepo.findById(id).orElse(null);     
                 
-        // Proyecto proyToDelete = new Proyecto(proy.getId(), proy.getPathimg(),proy.getTitulo(),tecnosToDelete, proy.getFecha(),proy.getDescripcion(),proy.getProjectLink());
+        Proyecto proyToDelete = new Proyecto();
+        proyToDelete.setId(proy.getId());                
+        
         proyRepo.deleteById(id);
         
         return proyToDelete;

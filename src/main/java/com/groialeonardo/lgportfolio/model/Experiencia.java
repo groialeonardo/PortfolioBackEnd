@@ -27,9 +27,7 @@ public class Experiencia implements Serializable {
     private String descripcion;
 
     public Experiencia() {
-    }
-    
-    
+    }    
 
     public Experiencia(Long id, String pathlogo, String empresa, String puesto, String inicio, String fin, String descripcion) {
         this.id = id;

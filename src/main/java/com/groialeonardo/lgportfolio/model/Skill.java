@@ -25,9 +25,7 @@ public class Skill implements Serializable {
 
     public Skill() {
     }
-    
-    
-
+        
     public Skill(Long id, int percent, int radius, String imageSrc, int imageHeight, int imageWidth) {
         this.id = id;
         this.percent = percent;
