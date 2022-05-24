@@ -1,4 +1,4 @@
- 
+/* 
 package com.groialeonardo.lgportfolio.controller;
 import com.groialeonardo.lgportfolio.DTO.UsuarioDTO;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,3 +18,4 @@ public class AuthenticationController {
     }
     
 }
+*/

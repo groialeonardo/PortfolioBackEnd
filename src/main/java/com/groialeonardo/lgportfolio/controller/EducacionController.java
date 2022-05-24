@@ -31,21 +31,21 @@ public class EducacionController {
         return educService.getAll();
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PostMapping ("/educations")
     @ResponseBody
     public Educacion postEduc (@RequestBody Educacion educ) {
         return educService.create(educ);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PutMapping ("/educations/{id}")
     @ResponseBody
     public Educacion putEduc (@RequestBody Educacion educ){
         return educService.update(educ);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping ("/educations/{id}")
     @ResponseBody
     public Educacion deleteEduc (@PathVariable long id){

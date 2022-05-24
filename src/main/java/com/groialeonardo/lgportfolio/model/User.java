@@ -15,7 +15,7 @@ public class User implements UserDetails  {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     @Column( nullable = false, unique = true, length = 50)
     private String email;
     @Column( nullable = false)
@@ -29,14 +29,6 @@ public class User implements UserDetails  {
         this.password = password;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -48,8 +40,15 @@ public class User implements UserDetails  {
     public void setPassword(String password) {
         this.password = password;
     }
-    
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
