@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -59,7 +60,8 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
             .authorizeRequests().antMatchers(HttpMethod.GET, "/**").permitAll() 
             .antMatchers(HttpMethod.POST, "/login").permitAll()
             //.authorizeRequests().antMatchers("/**").permitAll()
-            .anyRequest().authenticated().and().httpBasic();
+            //.anyRequest().authenticated().and().httpBasic();
+            .anyRequest().authenticated().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         
         http.addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
 		
