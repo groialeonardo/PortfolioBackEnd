@@ -6,7 +6,7 @@ import com.groialeonardo.lgportfolio.services.IExperienciaService;
 //import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,7 +47,7 @@ public class ExperienciaController {
      return listaExps;*/
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+   // @PreAuthorize("hasRole('ADMIN')")
     @PostMapping ("/exps")
     @ResponseBody
     public Experiencia postExp (@RequestBody Experiencia exp) {
@@ -62,7 +62,7 @@ public class ExperienciaController {
     }
     
     
-    @PreAuthorize("hasRole('ADMIN')")
+   // @PreAuthorize("hasRole('ADMIN')")
     @PutMapping ("/exps/{id}")
     @ResponseBody
     public Experiencia putExp (@RequestBody Experiencia exp) {
@@ -81,7 +81,7 @@ public class ExperienciaController {
     }
     
     
-    @PreAuthorize("hasRole('ADMIN')")
+  //  @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping ("/exps/{id}")
     
    // @RequestMapping(value = "/exps/{id}", produces = "application/json", method=RequestMethod.DELETE)

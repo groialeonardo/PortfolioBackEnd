@@ -5,7 +5,7 @@ import com.groialeonardo.lgportfolio.model.Persona;
 import com.groialeonardo.lgportfolio.services.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,7 +31,7 @@ public class PersonaController {
        return persoService.getAll();
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+   // @PreAuthorize("hasRole('ADMIN')")
     @PostMapping ("/personas")
     @ResponseBody
     public Persona postPersona (@RequestBody Persona skill) {
@@ -40,7 +40,7 @@ public class PersonaController {
 
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+   // @PreAuthorize("hasRole('ADMIN')")
     @PutMapping ("/personas/{id}")
     @ResponseBody
     public Persona putPersona (@RequestBody Persona skill) {
@@ -48,7 +48,7 @@ public class PersonaController {
 
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+  //  @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping ("/personas/{id}")
     @ResponseBody
     public Persona deletePersona (@PathVariable long id) {
