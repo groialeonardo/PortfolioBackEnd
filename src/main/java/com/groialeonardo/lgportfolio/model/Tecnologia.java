@@ -20,7 +20,6 @@ public class Tecnologia implements Serializable {
     @Id 
     @GeneratedValue ( strategy = GenerationType.AUTO)
     private Long id;
-
     private String name;
     private String pathlogo;
     private int maxHeight;

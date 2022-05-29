@@ -34,10 +34,10 @@ public class TecnologiaService implements ITecnologiaService{
         
         Tecnologia proy = tecnoRepo.findById(id).orElse(null);
         // TO DO, se debe hacer una validacion de que esta tecnología no esté ligada a algún proyecto antes de proceder a su eliminacion
+        // Todavia no implementado en Frontend
                 
         Tecnologia tecnoToDelete = new Tecnologia();
-        tecnoToDelete.setId(proy.getId());                
-       
+        tecnoToDelete.setId(proy.getId());       
         tecnoRepo.deleteById(id);
         
         return tecnoToDelete;

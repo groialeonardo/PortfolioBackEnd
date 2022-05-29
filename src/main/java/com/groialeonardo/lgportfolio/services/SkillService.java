@@ -15,16 +15,13 @@ public class SkillService implements ISkillService{
     public ISkillRepository skillRepo;
 
     @Override
-    public List<Skill> getAll() {
-       
-        return skillRepo.findAll();
-       
+    public List<Skill> getAll() {       
+        return skillRepo.findAll();       
     }
 
     @Override
     public Skill create(Skill skill) {
-        return skillRepo.save(skill);
-        
+        return skillRepo.save(skill);        
     }
 
     @Override

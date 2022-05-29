@@ -25,8 +25,7 @@ public class ProyectoService implements IProyectoService {
     }
 
     @Override
-    public Proyecto create(Proyecto proy) {
-        
+    public Proyecto create(Proyecto proy) {        
         return proyRepo.save(proy);
        
     }
@@ -37,13 +36,10 @@ public class ProyectoService implements IProyectoService {
     }
 
     @Override
-    public Proyecto delete(Long id) {
-        
-        Proyecto proy = proyRepo.findById(id).orElse(null);     
-                
+    public Proyecto delete(Long id) {        
+        Proyecto proy = proyRepo.findById(id).orElse(null);                
         Proyecto proyToDelete = new Proyecto();
-        proyToDelete.setId(proy.getId());                
-        
+        proyToDelete.setId(proy.getId());         
         proyRepo.deleteById(id);
         
         return proyToDelete;

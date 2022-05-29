@@ -1,4 +1,3 @@
-
 package com.groialeonardo.lgportfolio.controller;
 
 import com.groialeonardo.lgportfolio.model.Tecnologia;
@@ -24,33 +23,26 @@ public class TecnologiaController {
     
     @GetMapping ("/tecnologies")
     @ResponseBody
-    public List<Tecnologia> getTecnologias () {
-        
+    public List<Tecnologia> getTecnologias () {        
         return tecnoService.getAll();
     }
     
     @PostMapping ("/tecnologies")
     @ResponseBody
-    public Tecnologia postTecnologia (@RequestBody Tecnologia tecno) {
-        
+    public Tecnologia postTecnologia (@RequestBody Tecnologia tecno) {        
         return tecnoService.create(tecno);
-
     }
     
     @PutMapping ("/tecnologies/{id}")
     @ResponseBody
     public Tecnologia putTecnologia (@RequestBody Tecnologia tecno) {
         return tecnoService.update(tecno);
-
     }
     
     @DeleteMapping ("/tecnologies/{id}")
     @ResponseBody
-    public Tecnologia deleteTecnologia (@PathVariable long id) {
-        
-        return tecnoService.delete(id);        
-
-    }
-    
+    public Tecnologia deleteTecnologia (@PathVariable long id) {        
+        return tecnoService.delete(id);   
+    }    
     
 }

@@ -17,8 +17,7 @@ public class Educacion implements Serializable {
     
     @Id 
     @GeneratedValue ( strategy = GenerationType.AUTO)
-    private Long id;
-    
+    private Long id;    
     private String pathlogo;
     private String institucion;
     private String titulo;

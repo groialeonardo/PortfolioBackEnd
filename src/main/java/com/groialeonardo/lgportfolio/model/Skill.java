@@ -15,8 +15,7 @@ public class Skill implements Serializable {
     
     @Id 
     @GeneratedValue ( strategy = GenerationType.AUTO)
-    private Long id;
-  
+    private Long id;  
     private int percent;
     private int radius;
     private String imageSrc;

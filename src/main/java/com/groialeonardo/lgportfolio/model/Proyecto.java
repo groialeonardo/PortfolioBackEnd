@@ -23,10 +23,7 @@ public class Proyecto implements Serializable {
   
     @Id 
     @GeneratedValue ( strategy = GenerationType.AUTO)
-    private Long id;
-    
-    
-    
+    private Long id;          
     private String pathimg;
     private String titulo;
     

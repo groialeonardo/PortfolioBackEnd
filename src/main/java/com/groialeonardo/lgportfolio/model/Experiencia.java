@@ -16,8 +16,7 @@ public class Experiencia implements Serializable {
 
     @Id 
     @GeneratedValue ( strategy = GenerationType.AUTO)
-    private Long id;
-    
+    private Long id;    
     private String pathlogo;
     private String empresa;
     private String puesto;
