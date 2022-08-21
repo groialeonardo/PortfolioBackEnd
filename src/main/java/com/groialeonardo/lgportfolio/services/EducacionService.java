@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class EducacionService implements IEducacionService{
     
     @Autowired
-    public IEducacionRepository educRepo;
+    IEducacionRepository educRepo;
 
     @Override
     public List<Educacion> getAll() {

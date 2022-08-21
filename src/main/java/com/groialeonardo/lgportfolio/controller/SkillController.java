@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SkillController {
     
     @Autowired
-    public ISkillService skillService;
+    ISkillService skillService;
     
     @GetMapping ("/skills")
     @ResponseBody 

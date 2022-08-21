@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExperienciaController {
     
     @Autowired
-    public IExperienciaService expService;
+    IExperienciaService expService;
     
     @GetMapping ("/exps")
     @ResponseBody

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonaController {
     
     @Autowired
-    public IPersonaService persoService;
+    IPersonaService persoService;
     
     
     @GetMapping ("/personas")

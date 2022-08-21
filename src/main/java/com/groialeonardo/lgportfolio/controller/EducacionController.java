@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EducacionController {
     
     @Autowired
-    public IEducacionService educService;
+    IEducacionService educService;
     
     @GetMapping ("/educations")
     @ResponseBody
